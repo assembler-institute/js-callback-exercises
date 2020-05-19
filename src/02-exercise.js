@@ -16,6 +16,14 @@ import { exercise02Task } from "./main";
  */
 function exercise02() {
   // Complete the code of the function
+  exercise02Task(function (result) {
+    $(".ex-container").append(
+      $("<p>", {
+        text: result,
+        class: "exercise-02",
+      })
+    );
+  });
 }
 
 export default exercise02;

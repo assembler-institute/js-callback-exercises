@@ -26,6 +26,23 @@ import { exercise03Task } from "./main";
  */
 function exercise03() {
   // Complete the code of the function
+  exercise03Task(function (error, result) {
+    if (error) {
+      $(".ex-container").append(
+        $("<p>", {
+          text: error.message,
+          class: "exercise-03",
+        })
+      );
+    } else {
+      $(".ex-container").append(
+        $("<p>", {
+          text: result,
+          class: "exercise-03",
+        })
+      );
+    }
+  });
 }
 
 export default exercise03;
