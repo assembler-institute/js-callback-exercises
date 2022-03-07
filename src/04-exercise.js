@@ -6,8 +6,11 @@ import { exercise04Task } from "./main";
  *
  * To see the result of this exercise check the node console
  */
-function exercise04() {
+ function exercise04() {
   // Complete the code of the function
+  setTimeout(function() {
+    console.log("hello")
+  }, 500)
 }
 
 export default exercise04;

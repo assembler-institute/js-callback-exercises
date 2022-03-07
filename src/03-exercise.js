@@ -21,8 +21,21 @@ import { exercise03Task } from './main';
  * The `p` element should be appended as the child of
  * the `.ex-container` div element
  */
-function exercise03() {
+ function exercise03() {
   // Complete the code of the function
+  exercise03Task(function(error, result) {
+    let elementInDom = document.querySelector('.ex-container')
+    let element = document.createElement('p')
+    element.classList.add('exercise-03')
+
+    if (error !== null) {
+      element.textContent = error.message
+    } else if (error === null) {
+      element.textContent = result
+    }
+    
+    elementInDom.append(element)
+  })
 }
 
 export default exercise03;
